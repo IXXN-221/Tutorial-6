@@ -14,37 +14,60 @@
 
         function add(a,b,c){
             // add the 3 numbers a, b & c together and print it out to the console
+            console.log(a+b+c);
         }   
 
         function subtract(x,y){
             // subtract y from x and print it out to the console
+            console.log(x-y);
         }
 
         function sayHi(name){
-            // print out to the console 'Hi, my name is ' plus the name parameter
+            // print out to the console 'Hi, my name is ' plus the name parameter'
+            console.log('Hi, my name is ' + name);
         }
 
         function countBackwards(){
             // run a loop that prints out to the console all the numbers from 10 to 1
+            for(let i = 10; i >=1; i--){
+                console.log(i);
+            }
         }
 
         function getItemAtIndex(arr1, index){
             // print out to the console the value of arr1 and the index of 'index'
+            console.log(arr1[index]);
         }
 
         function printOutArray(arr2){
             // print out to the console the contents of an array
-
+            for(let i = 0; i < arr2.length; i++){
+                console.log(arr2[i]);
+            }  
             //HINT: Look up the 'length' property of an array
         }
 
         function sumContentsOfArray(arr3){
             // sum together the contents of an array and print out to the console
+            let sum = 0;
+            for(let i = 0; i < arr3.length; i++){
+                sum = sum + arr3[i];
+            } 
+            console.log(sum); 
         }
 
         function underOver(arr4){
             // print out to the console the number of elements in arr3 that are greater than 4, and 
             // the number that are less than or equal to 4
+            let more = 0;
+            let lessOrEqual = 0;
+            for(let i = 0; i < arr4.length; i++){
+                if(arr4[i] >= 4){
+                    lessOrEqual = lessOrEqual + 1;
+                }else{
+                    more = more + 1;
+                }
+            } 
         }
 
         function birdPerson(){
@@ -86,7 +109,7 @@
         // countBackwards();
         // getItemAtIndex()
         // printOutArray();
-        // sumContentsOfArray();
+         sumContentsOfArray();
         // birdPerson();
 
 
