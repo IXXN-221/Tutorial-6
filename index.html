@@ -13,38 +13,97 @@
 
 
         function add(a,b,c){
+          console.log(a + b + c)
             // add the 3 numbers a, b & c together and print it out to the console
-        }   
+
+            add(a,b,c);
+
+        }
 
         function subtract(x,y){
+          console.log(y - x)
             // subtract y from x and print it out to the console
+
+        subtract(x,y);
         }
 
         function sayHi(name){
+          console.log('Hi my name is ' + name)
             // print out to the console 'Hi, my name is ' plus the name parameter
+          sayHi(name);
         }
 
         function countBackwards(){
-            // run a loop that prints out to the console all the numbers from 10 to 1
+          for(let i=10; i>=0; i--){
+            console.log(i);
+          } // this loop prints a if it is less than 0 and 'a too large' if 0 or greater
+                  // run a loop that prints out to the console all the numbers from 10 to 1
+
+          countBackwards();
         }
 
         function getItemAtIndex(arr1, index){
+
+          //console.log(arr1 [1])
+
+          console.log(arr1 [index])
             // print out to the console the value of arr1 and the index of 'index'
+
+          getItemAtIndex(arr1, index);
         }
 
         function printOutArray(arr2){
-            // print out to the console the contents of an array
 
+          for (let i=0; i < arr2.length; i++){
+
+            console.log(arr2 [i])
+
+          }
+            // print out to the console the contents of an array
             //HINT: Look up the 'length' property of an array
+
+        printOutArray(arr2);
         }
 
         function sumContentsOfArray(arr3){
+
+          let sum = 0
+
+          for (i = 0; i < arr3.length; i++){
+            sum +=  arr3[i];
+
+
+          }
+
+          console.log(sum)
+
+          sumContentsOfArray(arr3);
+
             // sum together the contents of an array and print out to the console
         }
 
         function underOver(arr4){
-            // print out to the console the number of elements in arr3 that are greater than 4, and 
+
+          let over = 0;
+          let under = 0;
+
+          for (let t=0; t < arr4.length; t++ ){
+            if(arr4[t] > 4){
+              over = over + 1;
+            }
+          }
+
+          for (let t=0; t < arr4.length; t++ ){
+            if(arr4[t] < 4){
+              under = under + 1;
+            }
+          }
+
+           console.log('Greater than 4 :' + over + ' / Less than 4: ' + under)
+            // print out to the console the number of elements in arr3 that are greater than 4, and
             // the number that are less than or equal to 4
+
+            underOver(arr4);
         }
 
         function birdPerson(){
@@ -53,7 +112,25 @@
             // and if it can be divided by both 3 AND 5 print out 'BirdPerson'
 
             //HINT: look up modulo operator
+
+            for(let i=51; i>=1; i--){
+              if(i%5 == 0 && i%3 == 0){
+                console.log('BirdPerson')
+              }
+              else if(i%3 == 0){
+                console.log('bird')
+              }
+              else if(i%5 == 0){
+                console.log('person')
+              }
+              else console.log(i)
+            }
+
+            birdPerson();
+
         }
+
+
 
         //-----------------------
 
@@ -61,7 +138,7 @@
         let a = 3;
         let b = 8;
         let c = -1;
- 
+
         let x = 10;
         let y = 3;
 
@@ -69,25 +146,24 @@
 
         let arr1 = ['pen', 'mouse', 'heater', 'chair', 'kettle'];
         let index = 3;
- 
+
         let arr2 = [1, 5, 'Bert', false];
- 
-        let arr3 = [3,-1,6,14,-3]
- 
+
+        let arr3 = [3,-1,6,14,-3];
+
         let arr4 = [7,1,3,8,9,2,5,5]
 
         //-------------------------------
 
-        // Function calls
 
-        // add();
-        // subtract();
-        // sayHi();
-        // countBackwards();
-        // getItemAtIndex()
-        // printOutArray();
-        // sumContentsOfArray();
-        // birdPerson();
+
+
+
+
+
+
+
+
 
 
     </script>
