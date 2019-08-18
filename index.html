@@ -13,41 +13,78 @@
 
 
         function add(a,b,c){
+            console.log(a,b,c);
             // add the 3 numbers a, b & c together and print it out to the console
         }   
 
         function subtract(x,y){
+            console.log(x-y);
             // subtract y from x and print it out to the console
         }
 
         function sayHi(name){
+            console.log('Hi, my name is' + name);
             // print out to the console 'Hi, my name is ' plus the name parameter
         }
 
         function countBackwards(){
+            for(i=10; i>=1; i--){
+                console.log(i);
+            }
             // run a loop that prints out to the console all the numbers from 10 to 1
         }
 
         function getItemAtIndex(arr1, index){
+            console.log(arr1[index]);
             // print out to the console the value of arr1 at the index of 'index'
         }
 
         function printOutArray(arr2){
+            console.log(arr2.length);
             // print out to the console the contents of an array
 
             //HINT: Look up the 'length' property of an array
         }
 
         function sumContentsOfArray(arr3){
+            console.log(arr3[0]+arr3[1]+arr3[2]+arr3[3]+arr3[4]);
             // sum together the contents of an array and print out to the console
         }
 
-        function underOver(arr4){
+        function underOver(arr3, arr4){
+
+//can't figure out how does this work :( I don't understant how can I output the value and also the parameters. 
+
+            var numberOfElement3 = arr3.toString();
+            var numberOfElement4 = arr4.toString();
+
+            if(numberOfElement3 > numberOfElement4 && numberOfElement3 <= numberOfElement4 ){
+                console.log(arr3, arr4);
+            }
+
+            function numberOfElement(){
+                if(arr3[index] > 4){
+                    console.log(arr3[index]);
+            } else if(arr3[index] <= 4){
+                console.log(arr3[index]);
+            }
+            }
+           
             // print out to the console the number of elements in arr3 that are greater than 4, and 
             // the number that are less than or equal to 4
         }
 
         function birdPerson(){
+            
+            for(let ctnumber = 51; ctnumber > 1; ctnumber--){
+                console.log(ctnumber);
+                if(ctnumber % 3 === 0){
+                    console.log('Bird');
+                } else if(ctnumber % 3 && ctnumber % 5 === 0){
+                    console.log('Person');
+                }
+            }
+            
             // print out to the console a countdown starting at 51 going to 1, but if the number can be
             // divided by then 3 printout 'Bird', if it can be divided by 5 then print out 'Person',
             // and if it can be divided by both 3 AND 5 print out 'BirdPerson'
@@ -80,14 +117,15 @@
 
         // Function calls
 
-        // add();
-        // subtract();
-        // sayHi();
-        // countBackwards();
-        // getItemAtIndex()
-        // printOutArray();
-        // sumContentsOfArray();
-        // birdPerson();
+        add(a,b,c);
+        subtract(x,y);
+        sayHi(name);
+        countBackwards();
+        getItemAtIndex(arr1, index);
+        printOutArray(arr2);
+        sumContentsOfArray(arr3);
+        underOver(arr3, arr4);
+        birdPerson();
 
 
     </script>
