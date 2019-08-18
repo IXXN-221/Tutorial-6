@@ -6,46 +6,86 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Learning JS</title>
 </head>
+
 <body>
+
     <script>
-
-        // To print to the console just have "console.log()" and what you want printed out inside the brackets.
-
 
         function add(a,b,c){
             // add the 3 numbers a, b & c together and print it out to the console
-        }   
+            console.log(a+b+c);
+        }
+
 
         function subtract(x,y){
             // subtract y from x and print it out to the console
+            console.log(x-y);
         }
+
 
         function sayHi(name){
             // print out to the console 'Hi, my name is ' plus the name parameter
+            console.log(name);
         }
+
 
         function countBackwards(){
             // run a loop that prints out to the console all the numbers from 10 to 1
+            for(let i=10; i>=1; i=i-1)
+            console.log(i);
         }
+
 
         function getItemAtIndex(arr1, index){
             // print out to the console the value of arr1 at the index of 'index'
+            console.log(arr1[index])
         }
+
 
         function printOutArray(arr2){
             // print out to the console the contents of an array
 
+            for (let i=0; i < arr2.length; i++){
+
+              console.log(arr2 [i])
+            }
+
             //HINT: Look up the 'length' property of an array
         }
 
+
         function sumContentsOfArray(arr3){
             // sum together the contents of an array and print out to the console
+            let sum = 0
+
+            for(i= 0; i < arr3.length; i++){
+              sum += arr3[i];
+
+            }
+            console.log(sum)
+
         }
 
+
         function underOver(arr4){
-            // print out to the console the number of elements in arr3 that are greater than 4, and 
+            // print out to the console the number of elements in arr4 that are greater than 4, and
             // the number that are less than or equal to 4
-        }
+            let over = 0;
+            let under = 0;
+
+            for(let i=0; i<arr4.length; i++){
+              if(arr4[i] > 4){
+                over = over+1;
+              }
+              else if(arr4[i] < 4){
+                under = under+1;
+              }
+            }
+
+            console.log('Greater than 4: ' + over + ' / Less than 4: ' + under)
+
+            }
+
 
         function birdPerson(){
             // print out to the console a countdown starting at 51 going to 1, but if the number can be
@@ -53,6 +93,20 @@
             // and if it can be divided by both 3 AND 5 print out 'BirdPerson'
 
             //HINT: look up modulo operator
+
+            for(let i=51; i>0; i--){
+              if((i%5) == 0 && (i%3) == 0){
+                console.log('birdPerson')
+              }
+              else if((i%3) == 0){
+                console.log('bird')
+              }
+              else if((i%5) == 0){
+                console.log('person')
+              }
+              else console.log(i)
+            }
+
         }
 
         //-----------------------
@@ -61,7 +115,7 @@
         let a = 3;
         let b = 8;
         let c = -1;
- 
+
         let x = 10;
         let y = 3;
 
@@ -69,25 +123,26 @@
 
         let arr1 = ['pen', 'mouse', 'heater', 'chair', 'kettle'];
         let index = 3;
- 
+
         let arr2 = [1, 5, 'Bert', false];
- 
+
         let arr3 = [3,-1,6,14,-3]
- 
+
         let arr4 = [7,1,3,8,9,2,5,5]
 
         //-------------------------------
 
         // Function calls
 
-        // add();
-        // subtract();
-        // sayHi();
-        // countBackwards();
-        // getItemAtIndex()
-        // printOutArray();
-        // sumContentsOfArray();
-        // birdPerson();
+        add(a,b,c);
+        subtract(x,y);
+        sayHi(name);
+        countBackwards();
+        getItemAtIndex(arr1, index)
+        printOutArray(arr2);
+        sumContentsOfArray(arr3);
+        underOver(arr4);
+        birdPerson();
 
 
     </script>
